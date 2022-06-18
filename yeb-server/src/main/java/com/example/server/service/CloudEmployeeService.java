@@ -1,11 +1,10 @@
 package com.example.server.service;
 
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.example.server.pojo.entity.CloudEmployeeEntity;
-import com.example.server.utils.PageUtils;
-
-import java.util.Map;
 
 /**
  * 
@@ -17,6 +16,6 @@ import java.util.Map;
 public interface CloudEmployeeService extends IService<CloudEmployeeEntity>
 {
 
-    PageUtils queryPage(Map<String, Object> params);
+    Page queryPage(Page<CloudEmployeeEntity> page, LambdaQueryWrapper<CloudEmployeeEntity> queryWrapper);
 }
 
