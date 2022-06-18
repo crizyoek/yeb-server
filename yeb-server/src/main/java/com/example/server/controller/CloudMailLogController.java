@@ -1,0 +1,78 @@
+package com.example.server.controller;
+
+import java.util.Arrays;
+import java.util.Map;
+
+import com.example.server.pojo.entity.CloudMailLogEntity;
+import com.example.server.service.CloudMailLogService;
+import com.example.server.utils.PageUtils;
+import com.example.server.utils.R;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+
+/**
+ * 
+ *
+ * @author crizyoek
+ * @email sunlightcs@gmail.com
+ * @date 2021-12-14 15:32:03
+ */
+@RestController
+@RequestMapping("product/cloudmaillog")
+public class CloudMailLogController {
+    @Autowired
+    private CloudMailLogService cloudMailLogService;
+
+    /**
+     * 列表
+     */
+    @GetMapping("/list")
+    public R list(@RequestParam Map<String, Object> params){
+        PageUtils page = cloudMailLogService.queryPage(params);
+
+        return R.ok().put("page", page);
+    }
+
+
+    /**
+     * 信息
+     */
+    @GetMapping("/info/{msgid}")
+    public R info(@PathVariable("msgid") String msgid){
+		CloudMailLogEntity cloudMailLog = cloudMailLogService.getById(msgid);
+
+        return R.ok().put("cloudMailLog", cloudMailLog);
+    }
+
+    /**
+     * 保存
+     */
+    @PostMapping("/save")
+    public R save(@RequestBody CloudMailLogEntity cloudMailLog){
+		cloudMailLogService.save(cloudMailLog);
+
+        return R.ok();
+    }
+
+    /**
+     * 修改
+     */
+    @PostMapping("/update")
+    public R update(@RequestBody CloudMailLogEntity cloudMailLog){
+		cloudMailLogService.updateById(cloudMailLog);
+
+        return R.ok();
+    }
+
+    /**
+     * 删除
+     */
+    @PostMapping("/delete")
+    public R delete(@RequestBody String[] msgids){
+		cloudMailLogService.removeByIds(Arrays.asList(msgids));
+
+        return R.ok();
+    }
+
+}

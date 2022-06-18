@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.server.pojo.dao.CloudSalaryDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.example.server.pojo.entity.CloudSalaryEntity" id="cloudSalaryMap">
+        <result property="id" column="id"/>
+        <result property="basicsalary" column="basicSalary"/>
+        <result property="bonus" column="bonus"/>
+        <result property="lunchsalary" column="lunchSalary"/>
+        <result property="trafficsalary" column="trafficSalary"/>
+        <result property="allsalary" column="allSalary"/>
+        <result property="pensionbase" column="pensionBase"/>
+        <result property="pensionper" column="pensionPer"/>
+        <result property="createdate" column="createDate"/>
+        <result property="medicalbase" column="medicalBase"/>
+        <result property="medicalper" column="medicalPer"/>
+        <result property="accumulationfundbase" column="accumulationFundBase"/>
+        <result property="accumulationfundper" column="accumulationFundPer"/>
+        <result property="name" column="name"/>
+    </resultMap>
+
+
+</mapper>

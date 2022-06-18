@@ -1,0 +1,15 @@
+
+P	java:S125'"<This block of commented-out lines of code should be removed.(¦±‡n
+Q	java:S125*"<This block of commented-out lines of code should be removed.(ß˜§è
+Q	java:S125."<This block of commented-out lines of code should be removed.(íÃë½
+Q	java:S1250"<This block of commented-out lines of code should be removed.(–™Öİ
+A
+java:S1168:"+Return an empty collection instead of null.(¥¹ï
+S
+java:S1128"6Remove this unused import 'io.swagger.models.auth.In'.(å£Ùó8œêèÿè/
+b
+java:S1128"@Remove this unused import 'org.apache.commons.lang.StringUtils'.(Ö¥¬øÿÿÿÿ8êèÿè/
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8–ÎŠ€é/
+Z
+java:S1128"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ8êèÿè/
